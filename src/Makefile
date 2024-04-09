@@ -1,0 +1,14 @@
+# THIS IS TEMPORARY FILE TO TEST GRAPHICS AND SHIT
+
+OBJS = graphics.c
+
+CC = gcc
+
+COMPILER_FLAGS = -Wall
+
+LINKER_FLAGS = -lSDL2
+
+OBJNAME = graphics
+
+all: 
+	$(CC) $(OBJS) $(COMPILER_FLAGS) $(LINKER_FLAGS) -o $(OBJNAME)
