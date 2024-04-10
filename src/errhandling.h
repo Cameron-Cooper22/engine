@@ -31,8 +31,10 @@ inline void Logger( char* logMsg ) {
   fclose(f);
 }
 
-#define assert(expr, msg) \
-  if (!(expr)) \
-    Logger( msg );
+#define assert(expr, err_msg)\
+  do { if( !expr ) { 	\
+      Logger(err_msg);	\
+      printf("%s", err_msg) }} \
+  while(0)
 
 #endif

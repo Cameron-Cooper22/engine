@@ -12,6 +12,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#include "errhandling.h"
+
 const int SCREEN_WIDTH = 640;
 const int SCREEN_HEIGHT = 480;
 
@@ -36,7 +38,7 @@ bool init() {
   bool success = true;
 
   if( SDL_Init( SDL_INIT_VIDEO ) < 0 ) {
-    printf( "\t[-] SDL could not initialize. SDL_ErrorL %s\n", SDL_GetError() );
+    assert()
     success = false;
   } else {
     
